@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 
 
 
@@ -35,8 +37,17 @@ namespace ATLS_TALKHAND
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string patth = "C:\\Users\\crist\\Desktop\\traductor\\general\\app.exe";
-            Process.Start(patth);
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            string fullPath = Path.Combine(path, "general\\app.exe");
+
+
+
+
+            Process.Start(fullPath);
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +57,10 @@ namespace ATLS_TALKHAND
             form.Show();
             this.Hide();
         }
-        
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
