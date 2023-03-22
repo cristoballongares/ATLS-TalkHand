@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Drawing.Drawing2D;
 
 namespace ATLS_TALKHAND
 {
@@ -32,11 +23,13 @@ namespace ATLS_TALKHAND
         {
             Class1 class1= new Class1();
  
+            
+
             label1.Text = class1.infoLetra(valor);
             label2.Text = class1.getLetra(valor);
 
             // Titulo del formulario dependiendo la letra que escogio
-            this.Text = class1.getLetra(valor);
+            this.Text = class1.getLetra(valor); 
 
             //Cambiamos backcolor
             
@@ -77,7 +70,7 @@ namespace ATLS_TALKHAND
             path.CloseFigure();
             pictureBox1.Region = new Region(path);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            e.Graphics.DrawImage(pictureBox1.Image, rect);
+            //e.Graphics.DrawImage(pictureBox1.Image, rect);
         }
 
         private void button7_Click(object sender, EventArgs e)

@@ -28,153 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            label1 = new Label();
+            button1 = new Button();
+            button6 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button7 = new Button();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(27, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 75);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = Color.Lavender;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(27, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(266, 75);
+            panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NK-B", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(59, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Letras";
+            label1.AutoSize = true;
+            label1.Font = new Font("UD Digi Kyokasho NK-B", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(59, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(144, 43);
+            label1.TabIndex = 0;
+            label1.Text = "Letras";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(52, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 61);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "A";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.DodgerBlue;
+            button1.DialogResult = DialogResult.OK;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(52, 109);
+            button1.Name = "button1";
+            button1.Size = new Size(61, 61);
+            button1.TabIndex = 1;
+            button1.Text = "A";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(52, 388);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(219, 41);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Practicar";
-            this.button6.UseVisualStyleBackColor = false;
+            button6.BackColor = Color.DarkSlateBlue;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Popup;
+            button6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Location = new Point(52, 388);
+            button6.Name = "button6";
+            button6.Size = new Size(219, 41);
+            button6.TabIndex = 6;
+            button6.Text = "Practicar";
+            button6.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(132, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 61);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "E";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.BackColor = Color.DodgerBlue;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(132, 109);
+            button2.Name = "button2";
+            button2.Size = new Size(61, 61);
+            button2.TabIndex = 7;
+            button2.Text = "E";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(210, 109);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 61);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "I";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.BackColor = Color.DodgerBlue;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(210, 109);
+            button3.Name = "button3";
+            button3.Size = new Size(61, 61);
+            button3.TabIndex = 8;
+            button3.Text = "I";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(86, 176);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 61);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "O";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.BackColor = Color.DodgerBlue;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(86, 176);
+            button4.Name = "button4";
+            button4.Size = new Size(61, 61);
+            button4.TabIndex = 9;
+            button4.Text = "O";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(169, 176);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 61);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "U";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.BackColor = Color.DodgerBlue;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(169, 176);
+            button5.Name = "button5";
+            button5.Size = new Size(61, 61);
+            button5.TabIndex = 10;
+            button5.Text = "U";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.MediumPurple;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button7.Location = new System.Drawing.Point(5, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(16, 25);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "<";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            button7.BackColor = Color.MediumPurple;
+            button7.FlatStyle = FlatStyle.System;
+            button7.Location = new Point(5, 3);
+            button7.Name = "button7";
+            button7.Size = new Size(16, 25);
+            button7.TabIndex = 16;
+            button7.Text = "<";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(321, 463);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MediumSlateBlue;
+            ClientSize = new Size(321, 463);
+            Controls.Add(button7);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button6);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            Name = "Form2";
+            Text = "Form2";
+            Load += Form2_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

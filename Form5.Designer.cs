@@ -1,6 +1,6 @@
 ﻿namespace ATLS_TALKHAND
 {
-    partial class Form3
+    partial class Form5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
-            // button3
+            // label1
             // 
-            button3.BackColor = Color.MediumPurple;
-            button3.FlatStyle = FlatStyle.System;
-            button3.Location = new Point(5, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(16, 25);
-            button3.TabIndex = 15;
-            button3.Text = "<";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(135, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
-            // Form3
+            // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MediumSlateBlue;
+            BackColor = Color.FromArgb(94, 23, 235);
             ClientSize = new Size(321, 463);
-            Controls.Add(button3);
-            Name = "Form3";
-            Text = "Form3";
+            Controls.Add(label1);
+            Name = "Form5";
+            Text = "Traductor";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private Button button3;
+
+        private Label label1;
     }
 }

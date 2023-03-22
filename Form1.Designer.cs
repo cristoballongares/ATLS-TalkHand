@@ -28,79 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            button3 = new Button();
+            button1 = new Button();
+            btnTraducir = new Button();
+            label1 = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(45, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 340);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.BackColor = Color.DarkSlateBlue;
+            panel1.Controls.Add(button3);
+            panel1.Location = new Point(45, 41);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(228, 340);
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(47, 117);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Activar camara";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.Location = new Point(47, 117);
+            button3.Name = "button3";
+            button3.Size = new Size(141, 23);
+            button3.TabIndex = 0;
+            button3.Text = "Activar camara";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(31, 358);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 64);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Palabras";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.LightSteelBlue;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(31, 358);
+            button1.Name = "button1";
+            button1.Size = new Size(70, 64);
+            button1.TabIndex = 1;
+            button1.Text = "Palabras";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // button2
+            // btnTraducir
             // 
-            this.button2.BackColor = System.Drawing.Color.LightBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(216, 358);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 64);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Expresion";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            btnTraducir.BackColor = Color.LightBlue;
+            btnTraducir.FlatStyle = FlatStyle.Flat;
+            btnTraducir.Location = new Point(216, 358);
+            btnTraducir.Name = "btnTraducir";
+            btnTraducir.Size = new Size(70, 64);
+            btnTraducir.TabIndex = 2;
+            btnTraducir.Text = "Traducir";
+            btnTraducir.UseVisualStyleBackColor = false;
+            btnTraducir.Click += button2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(141, 7);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 3;
+            label1.Text = "label1";
+           
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(321, 463);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "ATLS - TalkHand";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MediumSlateBlue;
+            ClientSize = new Size(321, 463);
+            Controls.Add(label1);
+            Controls.Add(btnTraducir);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            Name = "Form1";
+            Text = "ATLS - TalkHand";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Panel panel1;
         private Button button1;
-        private Button button2;
+        private Button btnTraducir;
         private Button button3;
+        private Label label1;
     }
 }

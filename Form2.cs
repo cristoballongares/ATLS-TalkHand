@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ATLS_TALKHAND
+﻿namespace ATLS_TALKHAND
 {
     public partial class Form2 : Form
     {
@@ -18,7 +7,12 @@ namespace ATLS_TALKHAND
         public Form2()
         {
             InitializeComponent();
-            
+
+        }
+
+        public void openForm()
+        {
+           
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -33,17 +27,17 @@ namespace ATLS_TALKHAND
 
             valor = 1;
             Form4 form = new Form4(valor);
-            form.valor= valor;
+            form.valor = valor;
             form.Show();
-            form.FormImg = Image.FromFile(class1.getImage(valor)); 
-            
+            form.FormImg = Image.FromFile(class1.getImage(valor));
+
             this.Close();
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
 
             valor = 2;
             Form4 form = new Form4(valor);
@@ -85,6 +79,11 @@ namespace ATLS_TALKHAND
             form.FormImg = Image.FromFile(class1.getImage(valor));
 
             this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -126,10 +126,10 @@
 
         #endregion
 
-        private Label label1;
+        public Label label1;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Label label2;
+        public Label label2;
         private Panel panel2;
         private Button button7;
     }
