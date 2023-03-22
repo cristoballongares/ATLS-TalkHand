@@ -70,6 +70,7 @@
             button1.Name = "button1";
             button1.Size = new Size(61, 61);
             button1.TabIndex = 1;
+            button1.Tag = "1";
             button1.Text = "A";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -97,6 +98,7 @@
             button2.Name = "button2";
             button2.Size = new Size(61, 61);
             button2.TabIndex = 7;
+            button2.Tag = "2";
             button2.Text = "E";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;

@@ -10,9 +10,15 @@
 
         }
 
-        public void openForm()
+        private void button_Click(object sender, EventArgs e)
         {
-           
+            Button button = (Button)sender;
+            int valor = int.Parse(button.Tag.ToString());
+            Form4 form = new Form4(valor);
+            form.valor = valor;
+            form.Show();
+            form.FormImg = Image.FromFile(class1.getImage(valor));
+            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -25,60 +31,33 @@
         private void button1_Click(object sender, EventArgs e)
         {
 
-            valor = 1;
-            Form4 form = new Form4(valor);
-            form.valor = valor;
-            form.Show();
-            form.FormImg = Image.FromFile(class1.getImage(valor));
-
-            this.Close();
+            button1.Tag = 1;
+            button_Click(sender, e);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-
-            valor = 2;
-            Form4 form = new Form4(valor);
-            form.valor = valor;
-            form.Show();
-            form.FormImg = Image.FromFile(class1.getImage(valor));
-
-            this.Close();
+            button2.Tag = 2;
+            button_Click(sender, e);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            valor = 3;
-            Form4 form = new Form4(valor);
-            form.valor = valor;
-            form.Show();
-            form.FormImg = Image.FromFile(class1.getImage(valor));
-
-            this.Close();
+            button3.Tag = 3;
+            button_Click(sender, e);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            valor = 4;
-            Form4 form = new Form4(valor);
-            form.valor = valor;
-            form.Show();
-            form.FormImg = Image.FromFile(class1.getImage(valor));
-
-            this.Close();
+            button4.Tag = 4;
+            button_Click(sender, e);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            valor = 5;
-            Form4 form = new Form4(valor);
-            form.valor = valor;
-            form.Show();
-            form.FormImg = Image.FromFile(class1.getImage(valor));
-
-            this.Close();
+            button5.Tag = 5;
+            button_Click(sender, e);
         }
 
         private void Form2_Load(object sender, EventArgs e)
