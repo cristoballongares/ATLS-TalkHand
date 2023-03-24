@@ -30,6 +30,10 @@ namespace ATLS_TALKHAND
                 case 6: info = "Junta los dedos pulgar, índice y\n medio. Lleva la mano nhacia la altura\n del hombro, manteniendo la palma\n  hacia abajo.";
                 break;
 
+                case 7:
+                    info = "Levanta la mano derecha con la palma\n hacia adelante y los dedos juntos. \nLuego, agita la mano de un lado \na otro varias veces.";
+                    break;
+
                 default:
                     info = "asd";
                     break;
@@ -48,6 +52,7 @@ namespace ATLS_TALKHAND
                 case 4: return "Letra O";
                 case 5: return "Letra U";
                 case 6: return "Hola";
+                case 7: return "Adios";
             }
             
             return "x";
@@ -77,7 +82,9 @@ namespace ATLS_TALKHAND
                 case 6:
                     ub = Path.Combine(path, "img/hola.jpeg");
                     return ub;
-
+                case 7:
+                    ub = Path.Combine(path, "img/adios.png");
+                    return ub;
 
             }
             {

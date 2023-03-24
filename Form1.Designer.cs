@@ -48,6 +48,7 @@
             // 
             // button3
             // 
+            button3.Font = new Font("Microsoft New Tai Lue", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(47, 117);
             button3.Name = "button3";
             button3.Size = new Size(141, 23);
@@ -58,8 +59,9 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.LightSteelBlue;
+            button1.BackColor = Color.LightBlue;
             button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(31, 358);
             button1.Name = "button1";
             button1.Size = new Size(70, 64);
@@ -83,12 +85,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(141, 7);
+            label1.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(125, 9);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(67, 19);
             label1.TabIndex = 3;
-            label1.Text = "label1";
-           
+            label1.Text = "¡Buen dia!";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // Form1
             // 

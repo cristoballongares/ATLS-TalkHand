@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Drawing;
 using System.Text.Json.Serialization;
+using static IronPython.Modules._ast;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace ATLS_TALKHAND
@@ -18,13 +19,14 @@ namespace ATLS_TALKHAND
             ["letra i"] = 3,
             ["letra o"] = 4,
             ["letra u"] = 5,
-            ["Hola"] = 6
+            ["Hola"] = 6,
+            ["adi\u00f3s"] = 7
         };
 
 
-        
+
         int valor;
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -38,41 +40,32 @@ namespace ATLS_TALKHAND
 
         public void translate(int valor)
         {
-            label1.Text = valor.ToString();
             Form4 form4 = new Form4(valor);
             form4.valor = valor;
-            string imagePath = Path.Combine(path, "img", "a.png");
-
-            if (File.Exists(imagePath))
-            {
-                form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-            }
-            else
-            {
-                MessageBox.Show("La imagen no existe en la ruta especificada.");
-            }
+            form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
             form4.Show();
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-       
+
 
             string trPath = Path.Combine(path, "traductor\\translate.exe");
 
-                Process proceso = Process.Start(trPath);
-                proceso.WaitForExit();
-                Thread.Sleep(2000);
-                string jsPath = Path.Combine(path, "info.json");
+            Process proceso = Process.Start(trPath);
+            proceso.WaitForExit();
+            Thread.Sleep(2000);
+            string jsPath = Path.Combine(path, "info.json");
             try
             {
                 string contenidoJson = File.ReadAllText(jsPath);
                 dynamic objetoJson = JsonConvert.DeserializeObject(contenidoJson);
                 string valorVariable = objetoJson["letra"];
                 int valor;
-                
-                if(valoresLetras.TryGetValue(valorVariable, out valor)) { 
+
+                if (valoresLetras.TryGetValue(valorVariable, out valor))
+                {
                     translate(valor);
                 }
 
@@ -83,10 +76,10 @@ namespace ATLS_TALKHAND
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Palabra no encontrada " + ex);
                 throw;
             }
-   
+
 
 
 
@@ -117,6 +110,6 @@ namespace ATLS_TALKHAND
 
         }
 
-   
+
     }
 }
