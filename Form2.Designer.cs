@@ -172,7 +172,7 @@
             Controls.Add(button1);
             Controls.Add(panel1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Diccionario ";
             Load += Form2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -4,11 +4,12 @@ namespace ATLS_TALKHAND
 {
     public partial class Form4 : Form
     {
-       
+
         public Form4(int valor)
         {
             InitializeComponent();
-           
+            this.valor = valor;
+
         }
 
         public Image FormImg
@@ -21,18 +22,18 @@ namespace ATLS_TALKHAND
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            Class1 class1= new Class1();
- 
-            
+            Class1 class1 = new Class1();
+
+
 
             label1.Text = class1.infoLetra(valor);
             label2.Text = class1.getLetra(valor);
 
             // Titulo del formulario dependiendo la letra que escogio
-            this.Text = class1.getLetra(valor); 
+            this.Text = class1.getLetra(valor);
 
             //Cambiamos backcolor
-            
+
 
             System.Drawing.Drawing2D.GraphicsPath panelPath = new System.Drawing.Drawing2D.GraphicsPath();
             panelPath.StartFigure();
@@ -45,12 +46,12 @@ namespace ATLS_TALKHAND
             panelPath.AddArc(0, panel1.Height - 20, 20, 20, 90, 90);
             panelPath.CloseFigure();
             panel1.Region = new System.Drawing.Region(panelPath);
-            
+
         }
 
         private void Form4_SizeChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace ATLS_TALKHAND
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form2 form= new Form2();
+            Form2 form = new Form2();
             form.Show();
             this.Close();
         }

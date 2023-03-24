@@ -9,9 +9,22 @@ namespace ATLS_TALKHAND
 {
     public partial class Form1 : Form
     {
-        string path = AppDomain.CurrentDomain.BaseDirectory; // ubicacion actual
+        private readonly string path = AppDomain.CurrentDomain.BaseDirectory;
+        private readonly Class1 class1 = new Class1();
+        private readonly Dictionary<string, int> valoresLetras = new Dictionary<string, int>
+        {
+            ["letra a"] = 1,
+            ["letra e"] = 2,
+            ["letra i"] = 3,
+            ["letra o"] = 4,
+            ["letra u"] = 5,
+            ["Hola"] = 6
+        };
+
+
+        
         int valor;
-        Class1 class1 = new Class1();
+       
         public Form1()
         {
             InitializeComponent();
@@ -23,13 +36,28 @@ namespace ATLS_TALKHAND
 
         }
 
+        public void translate(int valor)
+        {
+            label1.Text = valor.ToString();
+            Form4 form4 = new Form4(valor);
+            form4.valor = valor;
+            string imagePath = Path.Combine(path, "img", "a.png");
+
+            if (File.Exists(imagePath))
+            {
+                form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
+            }
+            else
+            {
+                MessageBox.Show("La imagen no existe en la ruta especificada.");
+            }
+            form4.Show();
+        }
+
+
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Hide(); */
-        
+       
 
             string trPath = Path.Combine(path, "traductor\\translate.exe");
 
@@ -42,64 +70,12 @@ namespace ATLS_TALKHAND
                 string contenidoJson = File.ReadAllText(jsPath);
                 dynamic objetoJson = JsonConvert.DeserializeObject(contenidoJson);
                 string valorVariable = objetoJson["letra"];
-
-                switch(valorVariable)
-                {
-                    case "letra a":
-                        valor = 1;
-                        Form4 form = new Form4(valor);
-                        form.valor = valor;
-                        form.Show();
-                        form.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
-
-                    case "letra e":
-                        valor = 2;
-                        Form4 form1 = new Form4(valor);
-                        form1.valor = valor;
-                        form1.Show();
-                        form1.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
-
-                    case "letra i":
-                        valor = 3;
-                        Form4 form2 = new Form4(valor);
-                        form2.valor = valor;
-                        form2.Show();
-                        form2.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
-
-                    case "letra o":
-                        valor = 4;
-                        Form4 form3 = new Form4(valor);
-                        form3.valor = valor;
-                        form3.Show();
-                        form3.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
-
-                    case "letra u":
-                        valor = 5;
-                        Form4 form4 = new Form4(valor);
-                        form4.valor = valor;
-                        form4.Show();
-                        form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
-
-                    case "hola":
-                        valor = 6;
-                        Form4 form5 = new Form4(valor);
-                        form5.valor = valor;
-                        form5.Show();
-                        form5.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
-                    case "que":
-                        valor = 7;
-                        Form4 form6 = new Form4(valor);
-                        form6.valor = valor;
-                        form6.Show();
-                        form6.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
-                        break;
+                int valor;
+                
+                if(valoresLetras.TryGetValue(valorVariable, out valor)) { 
+                    translate(valor);
                 }
+
 
                 objetoJson["letra"] = "x";
                 string newContent = JsonConvert.SerializeObject(objetoJson);
