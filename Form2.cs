@@ -64,5 +64,45 @@
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            translate(6);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            translate(7);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            translate(11);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            translate(8);
+        }
+
+        public void translate(int valor)
+        {
+            Form4 form4 = new Form4(valor);
+            form4.valor = valor;
+            if (valor != 11 || valor != 12 || valor != 13 || valor != 14 || valor != 15 || valor != 16)
+            {
+                form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
+            }
+            else
+            {
+                System.Drawing.Image gif = System.Drawing.Image.FromFile(class1.getImage(valor));
+                form4.pictureBox1.Image = gif;
+
+
+            }
+
+            form4.Show();
+        }
+
     }
 }

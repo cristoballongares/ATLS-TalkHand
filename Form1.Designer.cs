@@ -33,6 +33,7 @@
             button1 = new Button();
             btnTraducir = new Button();
             label1 = new Label();
+            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -74,11 +75,12 @@
             // 
             btnTraducir.BackColor = Color.LightBlue;
             btnTraducir.FlatStyle = FlatStyle.Flat;
-            btnTraducir.Location = new Point(216, 358);
+            btnTraducir.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTraducir.Location = new Point(202, 358);
             btnTraducir.Name = "btnTraducir";
-            btnTraducir.Size = new Size(70, 64);
+            btnTraducir.Size = new Size(93, 32);
             btnTraducir.TabIndex = 2;
-            btnTraducir.Text = "Traducir";
+            btnTraducir.Text = "Traducir Voz";
             btnTraducir.UseVisualStyleBackColor = false;
             btnTraducir.Click += button2_Click;
             // 
@@ -86,12 +88,25 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(125, 9);
+            label1.Location = new Point(115, 9);
             label1.Name = "label1";
             label1.Size = new Size(67, 19);
             label1.TabIndex = 3;
             label1.Text = "¡Buen dia!";
             label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.LightBlue;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(202, 392);
+            button2.Name = "button2";
+            button2.Size = new Size(93, 32);
+            button2.TabIndex = 4;
+            button2.Text = "Traducir Texto";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // Form1
             // 
@@ -99,6 +114,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSlateBlue;
             ClientSize = new Size(321, 463);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(btnTraducir);
             Controls.Add(button1);
@@ -118,5 +134,6 @@
         private Button btnTraducir;
         private Button button3;
         private Label label1;
+        private Button button2;
     }
 }

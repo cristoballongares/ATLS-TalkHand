@@ -5,6 +5,9 @@ using System.Drawing;
 using System.Text.Json.Serialization;
 using static IronPython.Modules._ast;
 using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
+using System.Drawing.Imaging;
+
 
 namespace ATLS_TALKHAND
 {
@@ -20,7 +23,26 @@ namespace ATLS_TALKHAND
             ["letra o"] = 4,
             ["letra u"] = 5,
             ["Hola"] = 6,
-            ["adi\u00f3s"] = 7
+            ["hola"] = 6,
+            ["adi\u00f3s"] = 7,
+            ["adios"] = 7,
+            ["Adios"] = 7,
+            ["gracias"] = 8,
+            ["Gracias"] = 8,
+            ["denada"] = 9,
+            ["Denada"] = 9,
+            ["de nada"] = 9,
+            ["De nada"] = 9,
+            ["C\u00f3mo est\u00e1s"] = 11,
+            ["como estas"] = 11,
+            ["perd\u00f3n"] = 12,
+            ["perdon"] = 12,
+            ["no"] = 13,
+            ["si"] = 14,
+            ["s\u00ed"] = 14,
+            ["bien"] = 15,
+            ["mal"] = 16
+
         };
 
 
@@ -42,7 +64,18 @@ namespace ATLS_TALKHAND
         {
             Form4 form4 = new Form4(valor);
             form4.valor = valor;
-            form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
+            if (valor != 11 || valor != 12 || valor != 13 || valor != 14 || valor != 15 || valor != 16)
+            {
+                form4.FormImg = System.Drawing.Image.FromFile(class1.getImage(valor));
+            }
+            else
+            {
+                System.Drawing.Image gif = System.Drawing.Image.FromFile(class1.getImage(valor));
+                form4.pictureBox1.Image = gif;
+
+
+            }
+
             form4.Show();
         }
 
@@ -110,6 +143,22 @@ namespace ATLS_TALKHAND
 
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string texto = Microsoft.VisualBasic.Interaction.InputBox("Ingresa el texto\nEj: hola, letra a, adios", "Texto");
+            if (!string.IsNullOrWhiteSpace(texto))
+            {
+            
+               string valorVariable = texto;
+               int valor;
+               string newText = texto.ToLower();
 
+                if (valoresLetras.TryGetValue(newText, out valor))
+                {
+                    translate(valor);
+                }
+
+            }
+        }
     }
 }

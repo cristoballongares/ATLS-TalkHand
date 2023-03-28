@@ -37,6 +37,10 @@
             button4 = new Button();
             button5 = new Button();
             button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -157,12 +161,72 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // button8
+            // 
+            button8.BackColor = Color.DodgerBlue;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.Location = new Point(27, 243);
+            button8.Name = "button8";
+            button8.Size = new Size(99, 41);
+            button8.TabIndex = 17;
+            button8.Text = "Hola";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.DodgerBlue;
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button9.Location = new Point(27, 290);
+            button9.Name = "button9";
+            button9.Size = new Size(99, 41);
+            button9.TabIndex = 18;
+            button9.Text = "Adios";
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.BackColor = Color.DodgerBlue;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Unispace", 9.749999F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.Location = new Point(194, 243);
+            button10.Name = "button10";
+            button10.Size = new Size(99, 41);
+            button10.TabIndex = 19;
+            button10.Text = "Como estas";
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.DodgerBlue;
+            button11.FlatAppearance.BorderSize = 0;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Font = new Font("Unispace", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            button11.Location = new Point(194, 290);
+            button11.Name = "button11";
+            button11.Size = new Size(99, 41);
+            button11.TabIndex = 20;
+            button11.Text = "Gracias";
+            button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumSlateBlue;
             ClientSize = new Size(321, 463);
+            Controls.Add(button11);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -190,5 +254,9 @@
         private Button button4;
         private Button button5;
         private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button button10;
+        private Button button11;
     }
 }

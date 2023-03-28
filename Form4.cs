@@ -9,6 +9,8 @@ namespace ATLS_TALKHAND
         {
             InitializeComponent();
             this.valor = valor;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+
 
         }
 
@@ -25,9 +27,23 @@ namespace ATLS_TALKHAND
             Class1 class1 = new Class1();
 
 
-
+            if (valor == 16)
+            {
+                label1.Text = class1.infoLetra(valor);
+                label1.Font = new Font(label1.Font.FontFamily, 10);
+            } else { 
             label1.Text = class1.infoLetra(valor);
             label2.Text = class1.getLetra(valor);
+            }
+
+            if(valor == 11) { 
+            
+            label2.Text = class1.getLetra(valor);
+            label2.Font = new Font(label1.Font.FontFamily, 14);
+        } else { 
+            label1.Text = class1.infoLetra(valor);
+            label2.Text = class1.getLetra(valor);
+            }
 
             // Titulo del formulario dependiendo la letra que escogio
             this.Text = class1.getLetra(valor);

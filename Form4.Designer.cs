@@ -126,7 +126,7 @@
         #endregion
 
         public Label label1;
-        private PictureBox pictureBox1;
+        public PictureBox pictureBox1;
         private Panel panel1;
         public Label label2;
         private Panel panel2;
