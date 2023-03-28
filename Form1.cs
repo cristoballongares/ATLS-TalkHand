@@ -148,10 +148,10 @@ namespace ATLS_TALKHAND
             string texto = Microsoft.VisualBasic.Interaction.InputBox("Ingresa el texto\nEj: hola, letra a, adios", "Texto");
             if (!string.IsNullOrWhiteSpace(texto))
             {
-            
-               string valorVariable = texto;
-               int valor;
-               string newText = texto.ToLower();
+
+                string valorVariable = texto;
+                int valor;
+                string newText = texto.ToLower();
 
                 if (valoresLetras.TryGetValue(newText, out valor))
                 {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
@@ -111,6 +112,7 @@
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             ForeColor = SystemColors.ControlText;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form4";
             Text = "Form4";
             Load += Form4_Load;

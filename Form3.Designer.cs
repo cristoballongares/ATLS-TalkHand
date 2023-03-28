@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             button3 = new Button();
             SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             BackColor = Color.MediumSlateBlue;
             ClientSize = new Size(321, 463);
             Controls.Add(button3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
             Text = "Form3";
             ResumeLayout(false);

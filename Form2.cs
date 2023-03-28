@@ -68,21 +68,25 @@
         private void button8_Click(object sender, EventArgs e)
         {
             translate(6);
+            this.Close();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             translate(7);
+            this.Close();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             translate(11);
+            this.Close();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             translate(8);
+            this.Close();
         }
 
         public void translate(int valor)

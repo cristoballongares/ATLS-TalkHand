@@ -31,18 +31,23 @@ namespace ATLS_TALKHAND
             {
                 label1.Text = class1.infoLetra(valor);
                 label1.Font = new Font(label1.Font.FontFamily, 10);
-            } else { 
-            label1.Text = class1.infoLetra(valor);
-            label2.Text = class1.getLetra(valor);
+            }
+            else
+            {
+                label1.Text = class1.infoLetra(valor);
+                label2.Text = class1.getLetra(valor);
             }
 
-            if(valor == 11) { 
-            
-            label2.Text = class1.getLetra(valor);
-            label2.Font = new Font(label1.Font.FontFamily, 14);
-        } else { 
-            label1.Text = class1.infoLetra(valor);
-            label2.Text = class1.getLetra(valor);
+            if (valor == 11)
+            {
+
+                label2.Text = class1.getLetra(valor);
+                label2.Font = new Font(label1.Font.FontFamily, 14);
+            }
+            else
+            {
+                label1.Text = class1.infoLetra(valor);
+                label2.Text = class1.getLetra(valor);
             }
 
             // Titulo del formulario dependiendo la letra que escogio

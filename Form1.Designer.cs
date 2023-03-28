@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             button3 = new Button();
             button1 = new Button();
@@ -119,6 +120,7 @@
             Controls.Add(btnTraducir);
             Controls.Add(button1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "ATLS - TalkHand";
             Load += Form1_Load;

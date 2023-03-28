@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             panel1 = new Panel();
             label1 = new Label();
             button1 = new Button();
@@ -235,6 +236,7 @@
             Controls.Add(button6);
             Controls.Add(button1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             Text = "Diccionario ";
             Load += Form2_Load;
